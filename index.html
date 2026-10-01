@@ -161,6 +161,8 @@
             message += `\n💰 *Estimated Total:* ₹${grandTotal}\n`;
             message += `📍 _Pickup/Delivery near KSRTC Bus Stand, Anekal_`;
 
+            window.location.href = "https://wa.me" + encodeURIComponent(message);
+        }
             const encodedMessage = encodeURIComponent(message);
             const targetPhone = "919632320042"; // Official store anchor tracking number
             
