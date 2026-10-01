@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Lite Supermarket - Anekal</title>
+    <!-- Tailwind CSS for mobile-first layout rendering -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        .sticky-cart { transform: translateY(150%); transition: transform 0.3s ease-in-out; }
+        .sticky-cart.active { transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans pb-24">
+
+    <!-- Header Section -->
+    <header class="bg-emerald-600 text-white shadow-md">
+        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
+            <h1 class="text-3xl font-extrabold tracking-tight">HI LITE SUPERMARKET</h1>
+            <p class="text-emerald-100 text-sm mt-1 font-medium">Anekal's Oldest & Most Trusted Grocery Store</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs bg-emerald-700/50 p-3 rounded-lg max-w-md mx-auto">
+                <span>📍 Next to KSRTC Bus Stand, Anekal</span>
+                <span class="hidden sm:inline">|</span>
+                <span>⏰ Open Daily: 7:30 AM - 10:00 PM</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 mt-6">
+        <!-- Local Customer Reviews Display Block -->
+        <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mb-6">
+            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">What Locals Say</h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-emerald-500">
+                    <p class="text-sm italic">"The oldest and most famous supermarket here. Excellent customer service and smooth shopping experience every time."</p>
+                    <span class="text-xs font-bold text-gray-600 block mt-1">- Local Google Review</span>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-amber-500">
+                    <p class="text-sm italic">"Great selection of quality household products right by the main bus stand. Incredibly convenient for daily needs!"</p>
+                    <span class="text-xs font-bold text-gray-600 block mt-1">- Anekal Shopper</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Product Catalog Grid -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">🛒 Quick-Order Catalog</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                
+                <!-- Product 1 -->
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🌾</div>
+                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Premium Basmati Rice</h3>
+                        <p class="text-xs text-gray-500 mt-0.5">Weight: 5 Kg</p>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="font-bold text-emerald-600 text-sm">₹450</span>
+                        <button onclick="addToCart(1, 'Premium Basmati Rice (5kg)', 450)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🌻</div>
+                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Pure Sunflower Cooking Oil</h3>
+                        <p class="text-xs text-gray-500 mt-0.5">Volume: 1 Litre</p>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="font-bold text-emerald-600 text-sm">₹145</span>
+                        <button onclick="addToCart(2, 'Sunflower Oil (1L)', 145)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🥖</div>
+                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Aashirvaad Whole Wheat Atta</h3>
+                        <p class="text-xs text-gray-500 mt-0.5">Weight: 5 Kg</p>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="font-bold text-emerald-600 text-sm">₹260</span>
+                        <button onclick="addToCart(3, 'Aashirvaad Atta (5kg)', 260)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🍪</div>
+                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Britannia Marie Gold Family Pack</h3>
+                        <p class="text-xs text-gray-500 mt-0.5">Pack of 4</p>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="font-bold text-emerald-600 text-sm">₹90</span>
+                        <button onclick="addToCart(4, 'Marie Gold Pack', 90)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Sticky Dashboard Cart Layout Interface -->
+    <div id="cartBar" class="sticky-cart fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-xl p-4 z-50">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <div>
+                <span id="cartCount" class="bg-emerald-100 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full">0 Items</span>
+                <div class="text-sm font-black text-gray-900 mt-1">Est. Total: <span id="cartTotal" class="text-emerald-600">₹0</span></div>
+            </div>
+            <button onclick="sendOrderViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow-md transition-all active:scale-95">
+                Send Order to WhatsApp ➔
+            </button>
+        </div>
+    </div>
+
+    <!-- Frontend Dynamic Data Logic Script -->
+    <script>
+        let shoppingCart = [];
+
+        function addToCart(id, name, price) {
+            const existingItem = shoppingCart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                shoppingCart.push({ id, name, price, qty: 1 });
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const bar = document.getElementById('cartBar');
+            const countLabel = document.getElementById('cartCount');
+            const totalLabel = document.getElementById('cartTotal');
+            
+            if (shoppingCart.length === 0) {
+                bar.classList.remove('active');
+                return;
+            }
+            
+            bar.classList.add('active');
+            let totalItems = shoppingCart.reduce((sum, item) => sum + item.qty, 0);
+            let totalPrice = shoppingCart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            
+            countLabel.innerText = `${totalItems} ${totalItems === 1 ? 'Item' : 'Items'}`;
+            totalLabel.innerText = `₹${totalPrice}`;
+        }
+
+        function sendOrderViaWhatsApp() {
+            let message = "🛒 *NEW ORDER FROM HI LITE WEBSITE*\n\n";
+            let grandTotal = 0;
+
+            shoppingCart.forEach(item => {
+                let cost = item.price * item.qty;
+                grandTotal += cost;
+                message += `• ${item.name} (x${item.qty}) - ₹${cost}\n`;
+            });
+
+            message += `\n💰 *Estimated Total:* ₹${grandTotal}\n`;
+            message += `📍 _Pickup/Delivery near KSRTC Bus Stand, Anekal_`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const targetPhone = "919632320042"; // Official store anchor tracking number
+            
+            window.location.href = `https://wa.me{targetPhone}?text=${encodedMessage}`;
+        }
+    </script>
+</body>
+</html>
+ 
