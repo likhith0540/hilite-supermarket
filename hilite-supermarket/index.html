@@ -3,99 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi Lite Supermarket - Anekal</title>
-    <!-- Tailwind CSS for mobile-first layout rendering -->
+    <title>Hi Lite Supermarket - Premium Delivery</title>
+    <!-- Tailwind CSS for modern, web-app layout aesthetics -->
     <script src="https://jsdelivr.net"></script>
-    <style>
-        .sticky-cart { transform: translateY(150%); transition: transform 0.3s ease-in-out; }
-        .sticky-cart.active { transform: translateY(0); }
-    </style>
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans pb-24">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white pb-32">
 
-    <!-- Header Section -->
-    <header class="bg-emerald-600 text-white shadow-md">
-        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
-            <h1 class="text-3xl font-extrabold tracking-tight">HI LITE SUPERMARKET</h1>
-            <p class="text-emerald-100 text-sm mt-1 font-medium">Anekal's Oldest & Most Trusted Grocery Store</p>
-            <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs bg-emerald-700/50 p-3 rounded-lg max-w-md mx-auto">
-                <span>📍 Next to KSRTC Bus Stand, Anekal</span>
-                <span class="hidden sm:inline">|</span>
-                <span>⏰ Open Daily: 7:30 AM - 10:00 PM</span>
+    <!-- Premium App Navigation Top Header -->
+    <header class="sticky top-0 bg-slate-900/95 text-white backdrop-blur-md shadow-lg border-b border-slate-800 z-50 transition-all duration-300">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <span class="bg-emerald-500 text-slate-900 font-black text-xs px-2 py-0.5 rounded tracking-widest uppercase">EST. 1998</span>
+                    <span class="text-emerald-400 text-xs font-bold"><i class="fa-solid fa-circle-check"></i> Verified Partner</span>
+                </div>
+                <h1 class="text-2xl font-black tracking-tight mt-0.5 bg-gradient-to-r from-white via-slate-200 to-emerald-400 bg-clip-text text-transparent">HI LITE SUPERMARKET</h1>
+                <p class="text-slate-400 text-xs mt-0.5"><i class="fa-solid fa-location-dot text-emerald-500"></i> Taluk Office Road, Near KSRTC Bus Stand, Anekal</p>
+            </div>
+            <div class="flex items-center gap-3 text-xs bg-slate-800/80 px-4 py-2.5 rounded-xl border border-slate-700/50 backdrop-blur">
+                <span class="flex items-center gap-1.5 text-emerald-400 font-bold"><span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span> OPEN NOW</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 font-medium">⏰ 7:30 AM - 10:00 PM</span>
             </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 mt-6">
-        <!-- Local Customer Reviews Display Block -->
-        <section class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 mb-6">
-            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">What Locals Say</h3>
-            <div class="grid gap-3 sm:grid-cols-2">
-                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-emerald-500">
-                    <p class="text-sm italic">"The oldest and most famous supermarket here. Excellent customer service and smooth shopping experience every time."</p>
-                    <span class="text-xs font-bold text-gray-600 block mt-1">- Local Google Review</span>
-                </div>
-                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-amber-500">
-                    <p class="text-sm italic">"Great selection of quality household products right by the main bus stand. Incredibly convenient for daily needs!"</p>
-                    <span class="text-xs font-bold text-gray-600 block mt-1">- Anekal Shopper</span>
-                </div>
+        
+        <!-- Premium Promotional Store Banner Slider Area -->
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-800 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden mb-8 border border-emerald-500/20">
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-black">HI LITE</div>
+            <div class="max-w-md relative z-10">
+                <span class="bg-emerald-400/20 border border-emerald-400/30 text-emerald-300 font-bold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full">Anekal Local Priority</span>
+                <h2 class="text-2xl font-black tracking-tight mt-3 leading-tight">Skip the billing lines.<br>Order groceries straight to your doorstep.</h2>
+                <p class="text-emerald-100/80 text-xs mt-2 font-medium">Build your cart below and submit your list instantly via WhatsApp. Free local packing and instant verification.</p>
             </div>
-        </section>
+        </div>
 
-        <!-- Dynamic Product Catalog Grid -->
-        <section>
-            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">🛒 Quick-Order Catalog</h2>
+        <!-- Interactive Grid Product Catalog Section -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-5">
+                <h2 class="text-lg font-black tracking-tight text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-fire text-amber-500"></i> Fast-Moving Essentials
+                </h2>
+                <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Prices Verified Today</span>
+            </div>
+            
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 
-                <!-- Product 1 -->
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <!-- Product Card Premium Block 1 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 hover:border-emerald-500/30 p-4 transition-all duration-300 flex flex-col justify-between group relative">
+                    <span class="absolute top-2 left-2 bg-amber-500 text-white font-black text-[9px] px-2 py-0.5 rounded-full shadow z-10 uppercase tracking-wider">Top Seller</span>
                     <div>
-                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🌾</div>
-                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Premium Basmati Rice</h3>
-                        <p class="text-xs text-gray-500 mt-0.5">Weight: 5 Kg</p>
+                        <div class="bg-gradient-to-tr from-emerald-50 to-teal-50/50 rounded-xl h-28 flex items-center justify-center text-4xl group-hover:scale-105 transition-transform duration-300 select-none">🌾</div>
+                        <h3 class="font-bold text-sm tracking-tight text-slate-900 mt-3 leading-tight group-hover:text-emerald-600 transition-colors">Premium Basmati Rice</h3>
+                        <p class="text-[11px] font-semibold text-slate-400 mt-0.5">Quantity: 5 Kg Net</p>
                     </div>
-                    <div class="mt-3 flex items-center justify-between">
-                        <span class="font-bold text-emerald-600 text-sm">₹450</span>
-                        <button onclick="addToCart(1, 'Premium Basmati Rice (5kg)', 450)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    <div class="mt-4 flex items-center justify-between pt-2 border-t border-slate-50">
+                        <div>
+                            <span class="text-[10px] text-slate-400 line-through font-bold block leading-none">₹499</span>
+                            <span class="font-black text-slate-900 text-base">₹450</span>
+                        </div>
+                        <button onclick="addToCart(1, 'Premium Basmati Rice (5kg)', 450)" class="bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition-all duration-200 active:scale-95 shadow-sm">Add</button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <!-- Product Card Premium Block 2 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 hover:border-emerald-500/30 p-4 transition-all duration-300 flex flex-col justify-between group relative">
+                    <span class="absolute top-2 left-2 bg-rose-500 text-white font-black text-[9px] px-2 py-0.5 rounded-full shadow z-10 uppercase tracking-wider">Save 10%</span>
                     <div>
-                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🌻</div>
-                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Pure Sunflower Cooking Oil</h3>
-                        <p class="text-xs text-gray-500 mt-0.5">Volume: 1 Litre</p>
+                        <div class="bg-gradient-to-tr from-emerald-50 to-teal-50/50 rounded-xl h-28 flex items-center justify-center text-4xl group-hover:scale-105 transition-transform duration-300 select-none">🌻</div>
+                        <h3 class="font-bold text-sm tracking-tight text-slate-900 mt-3 leading-tight group-hover:text-emerald-600 transition-colors">Pure Sunflower Cooking Oil</h3>
+                        <p class="text-[11px] font-semibold text-slate-400 mt-0.5">Quantity: 1 Litre Bottle</p>
                     </div>
-                    <div class="mt-3 flex items-center justify-between">
-                        <span class="font-bold text-emerald-600 text-sm">₹145</span>
-                        <button onclick="addToCart(2, 'Sunflower Oil (1L)', 145)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    <div class="mt-4 flex items-center justify-between pt-2 border-t border-slate-50">
+                        <div>
+                            <span class="text-[10px] text-slate-400 line-through font-bold block leading-none">₹160</span>
+                            <span class="font-black text-slate-900 text-base">₹145</span>
+                        </div>
+                        <button onclick="addToCart(2, 'Sunflower Oil (1L)', 145)" class="bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition-all duration-200 active:scale-95 shadow-sm">Add</button>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                <!-- Product Card Premium Block 3 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-100 hover:border-emerald-500/30 p-4 transition-all duration-300 flex flex-col justify-between group relative">
                     <div>
-                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🥖</div>
-                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Aashirvaad Whole Wheat Atta</h3>
-                        <p class="text-xs text-gray-500 mt-0.5">Weight: 5 Kg</p>
+                        <div class="bg-gradient-to-tr from-emerald-50 to-teal-50/50 rounded-xl h-28 flex items-center justify-center text-4xl group-hover:scale-105 transition-transform duration-300 select-none">Atta</div>
+                        <h3 class="font-bold text-sm tracking-tight text-slate-900 mt-3 leading-tight group-hover:text-emerald-600 transition-colors">Aashirvaad Whole Wheat Atta</h3>
+                        <p class="text-[11px] font-semibold text-slate-400 mt-0.5">Quantity: 5 Kg Bag</p>
                     </div>
-                    <div class="mt-3 flex items-center justify-between">
-                        <span class="font-bold text-emerald-600 text-sm">₹260</span>
-                        <button onclick="addToCart(3, 'Aashirvaad Atta (5kg)', 260)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <div>
-                        <div class="bg-emerald-50 text-emerald-700 text-2xl h-24 rounded-lg flex items-center justify-center font-bold mb-2">🍪</div>
-                        <h3 class="font-semibold text-sm leading-tight text-gray-900">Britannia Marie Gold Family Pack</h3>
-                        <p class="text-xs text-gray-500 mt-0.5">Pack of 4</p>
-                    </div>
-                    <div class="mt-3 flex items-center justify-between">
-                        <span class="font-bold text-emerald-600 text-sm">₹90</span>
-                        <button onclick="addToCart(4, 'Marie Gold Pack', 90)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg transition-colors">Add</button>
+                    <div class="mt-4 flex items-center justify-between pt-2 border-t border-slate-50">
+                        <div>
+                            <span class="text-[10px] text-slate-400 line-through font-bold block leading-none">₹285</span>
+                            <span class="font-black text-slate-900 text-base">₹260</span>
+                        </div>
+                        <button onclick="addToCart(3, 'Aashirvaad Atta (5kg)', 260)" class="bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition-all duration-200 active:scale-95 shadow-sm">Add</button>
                     </div>
                 </div>
 
@@ -103,70 +106,16 @@
         </section>
     </main>
 
-    <!-- Sticky Dashboard Cart Layout Interface -->
-    <div id="cartBar" class="sticky-cart fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-xl p-4 z-50">
-        <div class="max-w-4xl mx-auto flex items-center justify-between">
-            <div>
-                <span id="cartCount" class="bg-emerald-100 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full">0 Items</span>
-                <div class="text-sm font-black text-gray-900 mt-1">Est. Total: <span id="cartTotal" class="text-emerald-600">₹0</span></div>
+    <!-- Professional Slide-up Quick Summary Cart Bar Interface -->
+    <div id="cartBar" class="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-96 bg-slate-900 text-white rounded-2xl shadow-2xl border border-slate-800 p-4 z-50 transform translate-y-32 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-base font-bold">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <div>
+                    <span id="cartCount" class="text-xs font-bold text-slate-400">0 Items Selected</span>
+                    <div class="text-sm font-black mt-0.5">Subtotal: <span id="cartTotal" class="text-emerald-400">₹0</span></div>
+                </div>
             </div>
-            <button onclick="sendOrderViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow-md transition-all active:scale-95">
-                Send Order to WhatsApp ➔
-            </button>
-        </div>
-    </div>
-
-    <!-- Frontend Dynamic Data Logic Script -->
-    <script>
-        let shoppingCart = [];
-
-        function addToCart(id, name, price) {
-            const existingItem = shoppingCart.find(item => item.id === id);
-            if (existingItem) {
-                existingItem.qty += 1;
-            } else {
-                shoppingCart.push({ id, name, price, qty: 1 });
-            }
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const bar = document.getElementById('cartBar');
-            const countLabel = document.getElementById('cartCount');
-            const totalLabel = document.getElementById('cartTotal');
-            
-            if (shoppingCart.length === 0) {
-                bar.classList.remove('active');
-                return;
-            }
-            
-            bar.classList.add('active');
-            let totalItems = shoppingCart.reduce((sum, item) => sum + item.qty, 0);
-            let totalPrice = shoppingCart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            
-            countLabel.innerText = `${totalItems} ${totalItems === 1 ? 'Item' : 'Items'}`;
-            totalLabel.innerText = `₹${totalPrice}`;
-        }
-
-        function sendOrderViaWhatsApp() {
-            let message = "🛒 *NEW ORDER FROM HI LITE WEBSITE*\n\n";
-            let grandTotal = 0;
-
-            shoppingCart.forEach(item => {
-                let cost = item.price * item.qty;
-                grandTotal += cost;
-                message += `• ${item.name} (x${item.qty}) - ₹${cost}\n`;
-            });
-
-            message += `\n💰 *Estimated Total:* ₹${grandTotal}\n`;
-            message += `📍 _Pickup/Delivery near KSRTC Bus Stand, Anekal_`;
-
-            const encodedMessage = encodeURIComponent(message);
-            const targetPhone = "919632320042"; // Official store anchor tracking number
-            
-            window.location.href = `https://wa.me{targetPhone}?text=${encodedMessage}`;
-        }
-    </script>
-</body>
-</html>
- 
+            <button onclick="sendOrderViaWhatsApp()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-black px-5 py-3 rounded-xl text-xs tracking-wider uppercase flex items-center gap-2 shadow-md transition-all active:scale-95 cursor-pointer">
